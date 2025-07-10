@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
-import { mockProjects, Project } from '../../src/project';
+import { mockProjects, Project } from '../project';
 
 export default function ProjectDetail() {
   const { id } = useParams();

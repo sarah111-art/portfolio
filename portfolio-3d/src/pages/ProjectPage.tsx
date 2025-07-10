@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import { mockProjects } from '../../src/project';
+import { mockProjects } from '../project';
 
 export default function ProjectsPage() {
   return (
