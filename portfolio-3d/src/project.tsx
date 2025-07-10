@@ -1,17 +1,15 @@
-/**
- * @typedef {Object} Project
- * @property {string} id
- * @property {string} title
- * @property {string} description
- * @property {string} imageUrl
- * @property {string[]} technologies
- * @property {string} [demoUrl]
- * @property {string} [demoUrlAdmin]
- * @property {string} [sourceCode]
- * @property {string} [username]
- * @property {string} [pass]
-
- */
+export interface Project {
+  id: string;
+  title: string;
+  description: string;
+  imageUrl: string;
+  technologies: string[];
+  demoUrl?: string;
+  demoUrlAdmin?: string;
+  sourceCode?: string;
+  username?: string;
+  pass?: string;
+}
 
 export const mockProjects = [
   {
