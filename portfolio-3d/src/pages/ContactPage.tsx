@@ -20,6 +20,14 @@ const formRef = useRef<HTMLFormElement>(null);
       .then(
         (result) => {
           alert('Message sent successfully!');
+          // Reset form
+          if (formRef.current) {
+            formRef.current.reset();
+          }
+          // Refresh trang sau 1 giây
+          setTimeout(() => {
+            window.location.reload();
+          }, 1000);
         },
         (error) => {
           alert('Something went wrong. Please try again.');
