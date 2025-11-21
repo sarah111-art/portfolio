@@ -16,7 +16,7 @@ export default function BottomNav() {
         <a href="/about" className="text-white hover:text-cyan-400 text-xl transition duration-300">
           <FaUserAlt />
         </a>
-        <a href="/project" className="text-white hover:text-cyan-400 text-xl transition duration-300">
+        <a href="/projects" className="text-white hover:text-cyan-400 text-xl transition duration-300">
           <FaProjectDiagram />
         </a>
         <a href="/contact" className="text-white hover:text-cyan-400 text-xl transition duration-300">

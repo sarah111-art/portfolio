@@ -27,8 +27,19 @@ const formRef = useRef<HTMLFormElement>(null);
       );
   };
   return (
-    <section id="contact" className="bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] bg-[length:400%_400%] animate-[bg-pan_10s_infinite] text-white py-20 px-6 min-h-screen">
-      <div className="max-w-5xl mx-auto">
+    <section id="contact" className="relative text-white py-20 px-6 min-h-screen overflow-hidden">
+      {/* GIF Background */}
+      <div className="absolute inset-0 w-full h-full z-0">
+        <img 
+          src="/GIF/giphy.gif" 
+          alt="Background" 
+          className="w-full h-full object-cover"
+        />
+      </div>
+      {/* Overlay để text dễ đọc */}
+      <div className="absolute inset-0 bg-black/50 z-10"></div>
+      
+      <div className="relative z-20 max-w-5xl mx-auto">
         {/* Heading */}
         <motion.h2
           className="text-4xl font-bold text-cyan-400 text-center mb-12"

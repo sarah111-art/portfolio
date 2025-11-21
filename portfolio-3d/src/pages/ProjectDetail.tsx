@@ -21,13 +21,24 @@ export default function ProjectDetail() {
   const nextProject = mockProjects[currentIndex + 1];
 
   return (
-    <section className="bg-slate-900 text-white min-h-screen py-16 px-6">
+    <section className="relative text-white min-h-screen py-16 px-6 overflow-hidden">
       <Helmet>
         <title>{project.title} | My Portfolio</title>
         <meta name="description" content={project.description} />
       </Helmet>
 
-      <div className="max-w-5xl mx-auto">
+      {/* GIF Background */}
+      <div className="absolute inset-0 w-full h-full z-0">
+        <img 
+          src="/GIF/giphy.gif" 
+          alt="Background" 
+          className="w-full h-full object-cover"
+        />
+      </div>
+      {/* Overlay để text dễ đọc */}
+      <div className="absolute inset-0 bg-black/50 z-10"></div>
+
+      <div className="relative z-20 max-w-5xl mx-auto">
         {/* Breadcrumb */}
         <div className="text-sm mb-6 text-gray-400">
           <Link to="/" className="hover:underline text-cyan-400">Home</Link> /{" "}
@@ -114,10 +125,12 @@ export default function ProjectDetail() {
               >
                 {project.demoUrlAdmin}
               </a>
-              <div className="mt-3 text-gray-400 text-sm space-y-1">
-                <p>👤 <strong>Username: admin@foodsun.com</strong> {project.username}</p>
-                <p>🔒 <strong>Password: admin123</strong> {project.pass}</p>
-              </div>
+              {project.username && project.pass && (
+                <div className="mt-3 text-gray-400 text-sm space-y-1">
+                  <p>👤 <strong>Username:</strong> {project.username}</p>
+                  <p>🔒 <strong>Password:</strong> {project.pass}</p>
+                </div>
+              )}
             </div>
           )}
         </motion.div>
