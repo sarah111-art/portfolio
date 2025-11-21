@@ -18,6 +18,32 @@ export default function HomePage() {
       {/* Overlay để text dễ đọc */}
       <div className="absolute inset-0 bg-black/50 z-10"></div>
       
+      {/* Floating Hello GIF */}
+      <motion.div
+        className="absolute top-10 right-10 z-30 hidden md:block"
+        initial={{ opacity: 0, scale: 0.5, y: -50 }}
+        animate={{ 
+          opacity: 1, 
+          scale: 1,
+          y: [0, -20, 0]
+        }}
+        transition={{ 
+          duration: 0.8,
+          delay: 1.2,
+          y: {
+            duration: 2,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }
+        }}
+      >
+        <img 
+          src="/GIF/icegif-939.gif" 
+          alt="Hello" 
+          className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 object-contain drop-shadow-2xl"
+        />
+      </motion.div>
+      
       <div className="relative z-20 max-w-7xl w-full grid md:grid-cols-2 gap-10 items-center">
         
         {/* LEFT: Info */}
